@@ -36,7 +36,7 @@ public class UpdateServlet extends HttpServlet {
         if(_token != null && _token.equals(request.getSession().getId())) {
             EntityManager t2 = TaskDButil.createEntityManager();
 
-            Task t = t2.find(Task.class, (Integer)(request.getSession().getAttribute("tasklist")));
+            Task t = t2.find(Task.class, (Integer)(request.getSession().getAttribute("task_id")));
 
             String content = request.getParameter("content");
             t.setContent(content);
@@ -53,5 +53,5 @@ public class UpdateServlet extends HttpServlet {
 
             response.sendRedirect(request.getContextPath() + "/index");
         }
+        }
     }
-}

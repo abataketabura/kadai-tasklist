@@ -14,7 +14,6 @@ import javax.servlet.http.HttpServletResponse;
 import models.Task;
 import util.TaskDButil;
 
-
 /**
  * Servlet implementation class IndexServlet
  */
@@ -44,7 +43,7 @@ public class IndexServlet extends HttpServlet {
 
         request.setAttribute("task", task);
 
-        if(request.getSession().getAttribute("flush") != null) {
+        if (request.getSession().getAttribute("flush") != null) {
             request.setAttribute("flush", request.getSession().getAttribute("flush"));
             request.getSession().removeAttribute("flush");
         }

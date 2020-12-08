@@ -61,7 +61,7 @@ public class CreateServlet extends HttpServlet {
 
                 // フォームに初期値を設定、さらにエラーメッセージを送る
                 request.setAttribute("_token", request.getSession().getId());
-                request.setAttribute("task", t2);
+                request.setAttribute("task", t);
                 request.setAttribute("errors", errors);
 
                 RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/task/new.jsp");
